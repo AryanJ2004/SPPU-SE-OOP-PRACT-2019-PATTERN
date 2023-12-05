@@ -21,7 +21,8 @@ for(iter=populationMap.begin();iter!=populationMap.end();++iter)
 cout<<iter->first<<":"
 <<iter->second<<" Million\n";
 }
-string country("Indonesia");
+string country;
+cin>>country;
 iter=populationMap.find(country);
 if(iter!=populationMap.end())
 cout<<country<<"s populations is"<<iter->second<<"million\n";
