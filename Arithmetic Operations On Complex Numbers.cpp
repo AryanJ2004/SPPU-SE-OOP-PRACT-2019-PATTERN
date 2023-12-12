@@ -18,10 +18,6 @@ public:
         friend istream &operator >>(istream &input,complex &t);
         friend ostream &operator <<(ostream &output,complex &t);
 
-
-
-
-
 };
 
 complex complex::operator+(complex c)
@@ -41,9 +37,9 @@ complex complex::operator*(complex c)
 }
 istream &operator>>(istream &input,complex &t)
 {
-	cout<<"Enter the real part";
+	cout<<"Enter the real part:";
 	input>>t.r;
-	cout<<"Enter the imaginary part";
+	cout<<"Enter the imaginary part:";
 
 	input>>t.i;
 }
@@ -56,17 +52,19 @@ ostream &operator<<(ostream &output,complex &t)
 int main()
 {
 	complex c1,c2,c3,c4;
-	cout<<"Default constructor value=\n"<<c1;
 
-	cout<<"Enter the 1st number\n";
+	cout<<"Enter the 1st number:\n";
 	cin>>c1;
-	cout<<"\nEnter the 2nd number";
+	cout<<"\nEnter the 2nd number:";
 	cin>>c2;
-	cout<<"The first number is\n"<<c1;
-	cout<<"The second number is\n"<<c2;
+        c3=c1+c2;
+        c4=c1*c2;
 
-	cout<<"\nAddition Of Two Complex Number Is"<<c3;
-	cout<<"\nMultiplication Of Two Complex Number Is"<<c4;
+	cout<<"The first number is:\n"<<c1;
+	cout<<"The second number is:\n"<<c2;
+
+	cout<<"\nAddition Of Two Complex Number Is:"<<c3;
+	cout<<"\nMultiplication Of Two Complex Number Is:"<<c4;
 
 	return 0;
 
